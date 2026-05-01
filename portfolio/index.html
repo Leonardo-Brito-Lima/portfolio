@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Leonardo Brito Lima — Dev & Design</title>
+  <link rel="icon" href="logo.png" type="image/png" />
   <meta name="description" content="Freelancer Full-Stack & Designer. Transformo necessidades em experiências digitais completas." />
 
   <!-- Fonts -->
@@ -78,13 +79,18 @@
       border-bottom: 1px solid var(--border);
     }
     .nav-logo {
-      font-family: var(--font-display);
-      font-size: 1.5rem;
-      letter-spacing: 3px;
-      color: var(--white);
+      display: flex; 
+      align-items: center;
       text-decoration: none;
     }
-    .nav-logo span { color: var(--lime); }
+    .logo-img {
+      height: 36px; /* Você pode aumentar ou diminuir esse valor depois para ajustar o tamanho ideal */
+      width: auto;
+      transition: transform .3s ease;
+    }
+    .nav-logo:hover .logo-img {
+      transform: scale(1.05); /* Dá um leve efeito de zoom ao passar o mouse */
+    }
     .nav-links { display: flex; gap: 2.5rem; list-style: none; }
     .nav-links a {
       font-family: var(--font-mono);
@@ -733,7 +739,11 @@
 
 <!-- NAV -->
 <nav id="mainNav">
-  <a href="#hero" class="nav-logo">LBL<span>.</span></a>
+  <nav id="mainNav">
+  <a href="#hero" class="nav-logo">
+    <img src="logo.png" alt="Logo LBL" class="logo-img">
+  </a>
+  <ul class="nav-links">
   <ul class="nav-links">
     <li><a href="#about">Sobre</a></li>
     <li><a href="#projects">Projetos</a></li>
