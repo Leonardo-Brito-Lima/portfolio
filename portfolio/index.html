@@ -84,12 +84,12 @@
       text-decoration: none;
     }
     .logo-img {
-      height: 36px; /* Você pode aumentar ou diminuir esse valor depois para ajustar o tamanho ideal */
+      height: 36px;
       width: auto;
       transition: transform .3s ease;
     }
     .nav-logo:hover .logo-img {
-      transform: scale(1.05); /* Dá um leve efeito de zoom ao passar o mouse */
+      transform: scale(1.05);
     }
     .nav-links { display: flex; gap: 2.5rem; list-style: none; }
     .nav-links a {
@@ -441,7 +441,7 @@
     }
     .auto-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr) !important;
       gap: 1px;
       background: var(--border);
     }
@@ -697,7 +697,7 @@
       .brand-grid,
       .services-row,
       .process-track { grid-template-columns: 1fr; }
-      .auto-grid { grid-template-columns: repeat(2, 1fr); }
+      .auto-grid { grid-template-columns: repeat(2, 1fr) !important; }
       .hero-badges { display: none; }
       .process-track::before { display: none; }
       .process-step { padding: 1.5rem 0; }
@@ -706,7 +706,7 @@
     }
 
     @media (max-width: 600px) {
-      .auto-grid { grid-template-columns: 1fr; }
+      .auto-grid { grid-template-columns: 1fr !important; }
       .flow-diagram { flex-wrap: wrap; gap: .5rem; justify-content: center; }
       .flow-arrow { display: none; }
     }
@@ -739,11 +739,9 @@
 
 <!-- NAV -->
 <nav id="mainNav">
-  <nav id="mainNav">
   <a href="#hero" class="nav-logo">
     <img src="logo.png" alt="Logo LBL" class="logo-img">
   </a>
-  <ul class="nav-links">
   <ul class="nav-links">
     <li><a href="#about">Sobre</a></li>
     <li><a href="#projects">Projetos</a></li>
@@ -768,8 +766,8 @@
       <span class="accent glitch" data-text="LIMA">LIMA</span>
     </h1>
     <p class="hero-sub">
-      <em>"Tecnologia inteligente para escalar seu negócio."</em><br><br>
-      De sites e aplicativos móveis a atendentes virtuais inteligentes no WhatsApp. Transformo gargalos operacionais em soluções digitais completas e automatizadas.
+      <em>"Seu negócio no automático. Sua marca no topo."</em><br><br>
+      Crio sites de alta conversão, sistemas web e chatbots com IA para WhatsApp que atendem e vendem por você 24/7. Automatizo processos para você focar no que importa: crescer.
     </p>
     <div class="hero-actions">
       <a href="#projects" class="btn btn-primary">Ver projetos →</a>
@@ -941,7 +939,7 @@
     <div class="flow-node n4">Notificação<br><small>(Resultado)</small></div>
   </div>
 
-    <div class="auto-grid reveal">
+  <div class="auto-grid reveal">
     <!-- Card 1 -->
     <div class="auto-card">
       <div class="auto-name">🤖 Chatbot IA para WhatsApp</div>
@@ -977,6 +975,7 @@
         <span class="atool">Python</span><span class="atool">Selenium</span><span class="atool">Power BI</span>
       </div>
     </div>
+  </div>
 </section>
 
 <!-- ─── BRANDING ──────────────────────────────── -->
